@@ -11,7 +11,7 @@
     <div class="div-table-row" ng-repeat="report in reports | filter:search" ng-class-odd="'odd'" ng-class-even="'even'" ng-cloak>
         <div class="div-table-cell actions">
             <a ng-click="loadReport(report)">
-                <i class="icon-search" ng-hide="report.id == selectedReport._id" title="Display details"></i>
+                <i class="icon-eye-open" ng-hide="report.id == selectedReport._id" title="Display details"></i>
                 <i class="icon-asterisk" ng-show="report.id == selectedReport._id" title="Current selection"></i>
             </a>
             <a ng-click="deleteReport(report)">
