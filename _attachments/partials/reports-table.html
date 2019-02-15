@@ -24,8 +24,7 @@
         <span title="Apllication version" class="div-table-cell label label-success">{{report.value.application_version}}</span>
         <span title="level" class="div-table-cell label {{report.value.level}}">{{report.value.level}}</span>
         <div class="div-table-cell exceptions">
-            <span title="Exception" class="label label-important">{{report.value.signature.digest}}</span>
-            <span title="Root exception" class="label label-inverse" ng-show="report.value.signature.rootCause">Caused by: {{report.value.signature.rootCause}}</span>
+            <span title="Exception" class="label label-important">{{report.value.stack_trace}}</span>
         </div>
     </div>
 </div>
