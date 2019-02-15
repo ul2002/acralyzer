@@ -1,0 +1,321 @@
+/*
+ Copyright 2013 Kevin Gaudin (kevin.gaudin@gmail.com)
+
+ This file is part of Acralyzer.
+
+ Acralyzer is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+ Acralyzer is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with Acralyzer.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+body {
+  font:1em Helvetica, sans-serif;
+  padding-top: 55px;
+}
+
+@media (max-width: 979px) {
+    body {
+        padding-top: 0;
+    }
+}
+
+.navbar-fixed-top .navbar-inner {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.navbar .brand {
+    padding-bottom: 0;
+    padding-left: 50px;
+    padding-top: 8px;
+    height: 32px;
+    background: url(../img/logo.png) 10px 3px no-repeat;
+}
+
+#profile {
+  border:4px solid #edd;
+  background:#fee;
+  padding:8px;
+  margin-bottom:8px;
+}
+
+
+#graph-container, #pie-charts {
+  height: 400px;
+}
+
+#graph-container, #pie-charts {
+  border-radius: 0.5em;
+  border: solid 1px #aaa;
+  display: block;
+  text-align: center;
+}
+
+#content {
+    border-radius: 0.5em;
+    border: solid 1px #aaa;
+    margin-top: 1.5em;
+    padding: 1em;
+}
+
+.report-details table {
+    width: auto;
+}
+
+.report-details thead{
+    display: none;
+}
+
+.report-details td {
+    overflow: auto;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
+
+.report-details td:first-child,
+table th {
+    text-shadow: 0 1px 0 #ffffff;
+    background-color: #eeeeee;
+    border: 1px solid #ccc;
+    padding: 0 0.5em;
+    font-weight: bold;
+}
+
+table td {
+    border: 1px solid #ccc;
+    padding: 0 0.5em;
+    background-color: #fff;
+}
+
+.report-details td table tr:first-child td {
+    border-top: 0;
+}
+
+.report-details td table tr:last-child td {
+    border-bottom: 0;
+}
+
+.report-details td table td:first-child {
+    border-left: 0;
+}
+
+.stacktrace {
+    background-color: #f5f5f5;
+    font-family: Monaco,Menlo,Consolas,"Courier New",monospace;
+    overflow-x: auto;
+    font-size: 0.8em;
+}
+
+.stacktrace ul {
+    margin: 0;
+}
+
+.stacktrace li {
+    word-break: break-all;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+}
+
+.nobr {
+    white-space: nowrap;
+}
+
+.loader {
+    text-align: center;
+    margin: 10em auto;
+}
+
+#reports-list li>div.odd {
+    background-color: #f9f9f9;
+}
+
+#reports-list li>div.even {
+    background-color: #fff;
+}
+
+.actions a:hover {
+    text-decoration: none;
+}
+
+.actions a {
+    cursor: pointer;
+}
+
+/* Footer
+-------------------------------------------------- */
+
+.footer {
+    text-align: center;
+    font-size: 0.8em;
+    padding: 30px 0;
+    margin-top: 80px;
+    border-top: 1px solid #e5e5e5;
+    background-color: #f5f5f5;
+}
+.footer p {
+    margin-bottom: 0;
+    color: #777;
+}
+.footer-links {
+    margin: 10px 0;
+}
+.footer-links li {
+    display: inline;
+    padding: 0 2px;
+}
+.footer-links li:first-child {
+    padding-left: 0;
+}
+
+.rss, .direct-link {
+    float: right;
+}
+
+.polling-indicator {
+    margin-top: 16px;
+}
+
+.notifications{position:fixed;}
+.notifications.top-right{right:10px;top:45px;}
+
+report-summary .label-androidversion {
+    padding-left: 18px;
+    background: #468847 url(../img/bugdroid-white.png) no-repeat 1px 1px;
+}
+
+
+.div-table{
+    display:table;
+    border-spacing: 0.3em;
+}
+.div-table-row{
+    display:table-row;
+}
+.div-table-row:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.div-table-cell {
+    display: table-cell;
+    padding: 0.1em 0.3em;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.div-table-row.header .div-table-cell {
+    white-space: nowrap;
+}
+
+.div-table-cell.exceptions {
+    text-align: left;
+}
+
+.div-table-cell.actions {
+    white-space: nowrap;
+    text-align: right;
+}
+
+.icon-bugdroid {
+    background-image: url(../img/bugdroid-black14.png);
+    background-position: 0px;
+}
+
+.icon-phone {
+    background-image: url(../img/device-black.png);
+    background-position: 0px;
+}
+
+.icon-bug-unsolved {
+    background-image: url(../img/bug.png);
+    background-position: 0px;
+}
+
+.icon-bug-unsolved:hover, .icon-bug-solved:hover {
+    background-image: url(../img/bug-rollover.png);
+    background-position: 0px;
+}
+
+.icon-bug-solved {
+    background-image: url(../img/bug-solved.png);
+    background-position: 0px;
+}
+
+bug-details textarea {
+    width: 90%;
+    height: 5em;
+    background-color: #f7f7f7;
+    margin-bottom: 0;
+}
+
+bug-details small {
+    font-size: 80%;
+    color: #aaaaaa;
+    font-style: italic;
+}
+
+bug-details a, bug-details a:hover {
+    color: #888888;
+}
+
+.bugs .tooltip-inner {
+    text-align: left;
+    color: #222222;
+    background-color: #f7f7f7;
+    border-color: #888888;
+    border-style: solid;
+    border-width: 1px;
+    max-width: none;
+}
+
+.bugs .tooltip.right .tooltip-arrow {
+    border-right-color: #888888;
+}
+
+.bugs .tooltip.in {
+    opacity: 0.95;
+}
+
+.paginator {
+    margin-bottom: 1em;
+}
+
+.affected-user {
+    margin: 3px;
+}
+
+.avatar {
+    height: 32px;
+    width: 32px;
+}
+
+.reports-table .avatar {
+    height: 24px;
+    width: 24px;
+}
+
+.info {
+    background-color: #17a2b8;
+}
+
+.warning {
+    background-color: #f89406;
+}
+
+.exception {
+    background-color: #343a40;
+}
+
+.error {
+    background-color: #dc3545;
+}
+

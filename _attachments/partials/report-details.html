@@ -1,0 +1,54 @@
+<div ng-show="report._id">
+    <hr/>
+    <div class="report-details-header">
+        <div class="direct-link"><a href="#/report-details/{{acralyzer.app}}/{{report._id}}"><i class="icon-share"></i>direct link</a></div>
+        <h3>Summary</h3>
+        <table>
+            <tr>
+                <th><i class="icon-gift"></i></th>
+                <th>Application name</th>
+                <td>{{report.APP_NAME}}</td>
+                <th>Application version </th>
+                <td>{{report.APP_VERSION}}</td>
+            </tr>
+            <tr>
+                <th><i class="icon-time"></i></th>
+                <th>Uptime</th>
+                <td class="nobr">{{report.readableUptime}}</td>
+                <th>Crashed</th>
+                <td>{{report.formatedCrashDate}}</td>
+                <th>Reported</th>
+                <td>{{report.formatedTimestamp}}</td>
+            </tr>
+            <tr>
+                <th><i class="icon-user"></i></th>
+                <th>Installation ID</th>
+                <td>
+                    <a class="label label-inverse" href="#/reports-browser/{{acralyzer.app}}/user/{{report.INSTALLATION_ID}}" ng-show="report.INSTALLATION_ID">
+                        <img class="avatar" monsterid="{{report.INSTALLATION_ID}}" title="{{report.INSTALLATION_ID}}"/>
+                        {{report.INSTALLATION_ID}}
+                    </a>
+                </td>
+                <th>E-mail</th>
+                <td><a href="mailto:{{report.USER_EMAIL}}">{{report.USER_EMAIL}}</a></td>
+                <th>Comment</th>
+                <td>{{report.USER_COMMENT}}</td>
+            </tr>
+            <tr>
+                <th rowspan="2"><i class="icon-fire"></i></th>
+                <th>Stack Trace</th>
+                <td colspan="5" class="stacktrace">
+                    <div ng-repeat="stackline in report.STACK_TRACE" class="pre">{{stackline}}</div>
+                </td>
+            </tr>
+            <tr>
+                <th>Custom Data</th>
+                <td colspan="5">
+                    <div prettyprint="report.CUSTOM_DATA"/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <h3>Full report</h3>
+    <div class="report-details" prettyprint="report" />
+</div>
