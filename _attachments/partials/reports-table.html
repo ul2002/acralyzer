@@ -4,8 +4,9 @@
         <div class="div-table-cell"><i class="icon-user"></i></div>
         <div class="div-table-cell"><i class="icon-time"></i></div>
         <div class="div-table-cell"><i class="icon-gift"></i></div>
+        <div class="div-table-cell"><i class="icon-bar"></i></div>
         <div class="div-table-cell"><i class="icon-bug"></i></div>
-        <div class="div-table-cell"><i class="icon-level"></i></div>
+        
         <div class="div-table-cell exceptions"><i class="icon-fire"></i></div>
     </div>
     <div class="div-table-row" ng-repeat="report in reports | filter:search" ng-class-odd="'odd'" ng-class-even="'even'" ng-cloak>
@@ -24,7 +25,8 @@
         <span title="Apllication version" class="div-table-cell label label-success">{{report.value.application_version}}</span>
         <span title="level" class="div-table-cell label {{report.value.level}}">{{report.value.level}}</span>
         <div class="div-table-cell exceptions">
-            <span title="Exception" class="label label-important">{{report.value.stack_trace}}</span>
+            <span title="Exception" >{{report.value.stack_trace[0] | limitTo: 100}}</span>
+            <span ng-hide="report.value.stack_trace[0].length < 100 "> &hellip; </span>
         </div>
     </div>
 </div>
